@@ -8,19 +8,19 @@
 (function(window, document, undefined) {
 'use strict';
 
-// Source: alert.tpl.js
-angular.module('mgcrea.ngStrap.alert').run([
-  '$templateCache',
-  function ($templateCache) {
-    $templateCache.put('alert/alert.tpl.html', '<div class="alert" tabindex="-1" ng-class="[type ? \'alert-\' + type : null]"><button type="button" class="close" ng-if="dismissable" ng-click="$hide()">&times;</button> <strong ng-bind="title"></strong>&nbsp;<span ng-bind-html="content"></span></div>');
-  }
-]);
-
 // Source: aside.tpl.js
 angular.module('mgcrea.ngStrap.aside').run([
   '$templateCache',
   function ($templateCache) {
     $templateCache.put('aside/aside.tpl.html', '<div class="aside" tabindex="-1" role="dialog"><div class="aside-dialog"><div class="aside-content"><div class="aside-header" ng-show="title"><button type="button" class="close" ng-click="$hide()">&times;</button><h4 class="aside-title" ng-bind="title"></h4></div><div class="aside-body" ng-bind="content"></div><div class="aside-footer"><button type="button" class="btn btn-default" ng-click="$hide()">Close</button></div></div></div></div>');
+  }
+]);
+
+// Source: alert.tpl.js
+angular.module('mgcrea.ngStrap.alert').run([
+  '$templateCache',
+  function ($templateCache) {
+    $templateCache.put('alert/alert.tpl.html', '<div class="alert" tabindex="-1" ng-class="[type ? \'alert-\' + type : null]"><button type="button" class="close" ng-if="dismissable" ng-click="$hide()">&times;</button> <strong ng-bind="title"></strong>&nbsp;<span ng-bind-html="content"></span></div>');
   }
 ]);
 
@@ -56,19 +56,19 @@ angular.module('mgcrea.ngStrap.popover').run([
   }
 ]);
 
-// Source: select.tpl.js
-angular.module('mgcrea.ngStrap.select').run([
-  '$templateCache',
-  function ($templateCache) {
-    $templateCache.put('select/select.tpl.html', '<ul tabindex="-1" class="select dropdown-menu" ng-show="$isVisible()" role="select"><li role="presentation" ng-repeat="match in $matches" ng-class="{active: $isActive($index)}"><a style="cursor: default" role="menuitem" tabindex="-1" ng-click="$select($index, $event)"><span ng-bind="match.label"></span> <i class="{{$iconCheckmark}} pull-right" ng-if="$isMultiple && $isActive($index)"></i></a></li></ul>');
-  }
-]);
-
 // Source: tab.tpl.js
 angular.module('mgcrea.ngStrap.tab').run([
   '$templateCache',
   function ($templateCache) {
     $templateCache.put('tab/tab.tpl.html', '<ul class="nav nav-tabs"><li ng-repeat="pane in panes" ng-class="{active: $index == active}"><a data-toggle="tab" ng-click="setActive($index, $event)" data-index="{{$index}}" ng-bind-html="pane.title"></a></li></ul><div class="tab-content"><div ng-repeat="pane in panes" class="tab-pane" ng-class="[$index == active ? \'active\' : \'\']" ng-include="pane.template || \'$pane\'"></div></div>');
+  }
+]);
+
+// Source: select.tpl.js
+angular.module('mgcrea.ngStrap.select').run([
+  '$templateCache',
+  function ($templateCache) {
+    $templateCache.put('select/select.tpl.html', '<ul tabindex="-1" class="select dropdown-menu" ng-show="$isVisible()" role="select"><li role="presentation" ng-repeat="match in $matches" ng-class="{active: $isActive($index)}"><a style="cursor: default" role="menuitem" tabindex="-1" ng-click="$select($index, $event)"><span ng-bind="match.label"></span> <i class="{{$iconCheckmark}} pull-right" ng-if="$isMultiple && $isActive($index)"></i></a></li></ul>');
   }
 ]);
 
