@@ -216,6 +216,8 @@ angular.module('mgcrea.ngStrap.tooltip', ['mgcrea.ngStrap.helpers.dimensions'])
           // Options: custom classes
           if(options.customClass) tipElement.addClass(options.customClass);
 
+          scope.$emit(options.prefixEvent + '.show.beforeAnimate', $tooltip);
+
           // Support v1.3+ $animate
           // https://github.com/angular/angular.js/commit/bf0f5502b1bbfddc5cdd2f138efd9188b8c652a9
           var promise = $animate.enter(tipElement, parent, after, enterAnimateCallback);

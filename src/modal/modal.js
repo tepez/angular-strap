@@ -142,7 +142,7 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.helpers.dimensions'])
             modalElement.addClass(options.animation);
           }
 
-          scope.$emit(options.prefixEvent + '.show.beforeAnimate', $tooltip);
+          scope.$emit(options.prefixEvent + '.show.beforeAnimate', $modal);
 
           if(options.backdrop) {
             $animate.enter(backdropElement, bodyElement, null);
